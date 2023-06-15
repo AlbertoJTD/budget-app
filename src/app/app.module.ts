@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { SummaryComponent } from './summary/summary.component';
 import { FormComponent } from './form/form.component';
 import { RevenuesComponent } from './revenues/revenues.component';
+import { ExpensesComponent } from './expenses/expenses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
     FormComponent,
-    RevenuesComponent
+    RevenuesComponent,
+    ExpensesComponent
   ],
   imports: [
     BrowserModule
