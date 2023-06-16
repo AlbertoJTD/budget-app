@@ -5,4 +5,9 @@ export class RevenuesService {
     new Revenue('Test', 1200),
     new Revenue('Clothes', 400)
   ];
+
+  deleteRevenue(revenue: Revenue): void {
+    const indexRecord: number = this.revenues.indexOf(revenue);
+    this.revenues.splice(indexRecord, 1);
+  }
 }
