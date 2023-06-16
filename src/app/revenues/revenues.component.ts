@@ -17,7 +17,6 @@ export class RevenuesComponent implements OnInit{
   }
 
   deleteRecord(revenue: Revenue): void {
-    console.log('entra deleteRecord()');
     this.revenueService.deleteRevenue(revenue);
   }
 }
