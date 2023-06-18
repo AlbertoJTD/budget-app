@@ -4,7 +4,7 @@
   <div *ngFor="let revenue of revenues" class="elemento limpiarEstilos">
     <div class="elemento_descripcion">{{ revenue.description }}</div>
     <div class="right limpiarEstilos">
-      <div class="elemento_valor">+ {{ revenue.amount }}</div>
+      <div class="elemento_valor">+ {{ revenue.amount | currency:'MNX':'$':'1.2-2' }}</div>
       <div class="elemento_eliminar">
         <button class="elemento_eliminar--btn" (click)="deleteRecord(revenue)">
           <i class="ion-ios-close-outline"></i>
