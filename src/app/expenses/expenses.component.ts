@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Expense } from './expenses.model';
 import { ExpensesService } from './expense.service';
 
@@ -9,6 +9,7 @@ import { ExpensesService } from './expense.service';
 })
 export class ExpensesComponent implements OnInit {
   expenses: Expense[] = [];
+  @Input() totalRevenues: number = 0;
 
   constructor(private expensesService: ExpensesService) { }
   
