@@ -20,4 +20,8 @@ export class ExpensesComponent implements OnInit {
   deleteRecord(expense: Expense): void {
     this.expensesService.deleteExpense(expense);
   }
+
+  getPercentage(amount: number): number {
+    return amount / this.totalRevenues;
+  }
 }
