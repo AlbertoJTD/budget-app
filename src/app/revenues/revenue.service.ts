@@ -10,4 +10,8 @@ export class RevenuesService {
     const indexRecord: number = this.revenues.indexOf(revenue);
     this.revenues.splice(indexRecord, 1);
   }
+
+  addRevenue(description: string, amount: number): void {
+    this.revenues.push(new Revenue(description, amount));
+  }
 }

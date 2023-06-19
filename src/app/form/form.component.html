@@ -1,17 +1,16 @@
 <form>
   <div class="agregar">
     <div class="agregar_contenedor">
-      <select class="agregar_tipo">
-        <option value="ing" selected>+</option>
-        <option value="egr">-</option>
+      <select (change)="operationType($event)" class="agregar_tipo">
+        <option value="revenue" selected>+</option>
+        <option value="expense">-</option>
       </select>
-      <input
-        type="text"
-        class="agregar_descripcion"
-        placeholder="Agregar Descripción"
-      />
-      <input type="number" class="agregar_valor" placeholder="Valor" />
-      <button class="agregar_btn">
+      
+      <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción" [(ngModel)]="descriptionInput" name="descriptionInput" />
+      
+      <input type="number" class="agregar_valor" placeholder="Valor" [(ngModel)]="amountInput" name="amountInput"/>
+      
+      <button class="agregar_btn" (click)="addRecord()">
         <i class="ion-ios-checkmark-outline"></i>
       </button>
     </div>
