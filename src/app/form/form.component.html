@@ -1,7 +1,7 @@
-<form>
+<form (ngSubmit)="f.form.valid && addRecord()" #f="ngForm">
   <div class="agregar">
     <div class="agregar_contenedor">
-      <select [ngClass]="{ redfocus: operation == 'expense' }" (change)="operationType($event)" class="agregar_tipo" required>
+      <select [ngClass]="{ redfocus: operation == 'expense' }" (change)="operationType($event)" class="agregar_tipo">
         <option value="revenue" selected>+</option>
         <option value="expense">-</option>
       </select>
@@ -10,7 +10,7 @@
       
       <input [ngClass]="{ redfocus: operation == 'expense' }"  type="number" class="agregar_valor" placeholder="Valor" [(ngModel)]="amountInput" name="amountInput" required/>
       
-      <button class="agregar_btn" (click)="addRecord()">
+      <button type="submit" class="agregar_btn">
         <i [ngClass]="{ red: operation == 'expense' }"  class="ion-ios-checkmark-outline"></i>
       </button>
     </div>
